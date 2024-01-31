@@ -10,7 +10,7 @@ function Home() {
         {
             title: "Web Development",
             skill1: "ReactJS",
-            skill2: "Material UI",
+            skill2: "HTML/CSS",
             icon: <WebIcon fontSize="inherit" />,
         },
         {

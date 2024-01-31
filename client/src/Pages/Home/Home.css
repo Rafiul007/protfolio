@@ -1,5 +1,5 @@
 .home-section {
-  border: 2px solid blue;
+  
 }
 .navbar-container {
   padding: 20px 0px;
@@ -69,6 +69,13 @@
   border: none;
   outline: none;
   border-radius: 3px;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  border: 2px solid #ff6464;
+}
+.hero-left button:hover{
+background: #fff;
+color: #ff6464;
 }
 .hero-right {
 }
