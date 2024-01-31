@@ -1,7 +1,31 @@
 import React from 'react'
 import './Home.css'
 import hero from '../../Assests/me.jpg'
+import ServiceCard from '../../Components/Cards/ServiceCard'
+import WebIcon from '@mui/icons-material/Web';
+import WebhookOutlinedIcon from '@mui/icons-material/WebhookOutlined';
+import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 function Home() {
+    const data = [
+        {
+            title: "Web Development",
+            skill1: "ReactJS",
+            skill2: "Material UI",
+            icon: <WebIcon fontSize="inherit" />,
+        },
+        {
+            title: "Software Development",
+            skill1: "ReactJS",
+            skill2: "NodeJS",
+            icon: <WebhookOutlinedIcon fontSize="inherit" />,
+        },
+        {
+            title: "App Development",
+            skill1: "Android",
+            skill2: "React native",
+            icon: <PhoneAndroidOutlinedIcon fontSize="inherit" />,
+        }
+    ];
     return (
         <>
             <div className="home-section">
@@ -33,7 +57,13 @@ function Home() {
                             <h1>What I Do?</h1>
                         </div>
                         <div className="service-cards">
-                            
+                            {
+                                data.map((item, index) => {
+                                    return (
+                                        <ServiceCard key={index}  icon={item.icon} title={item.title} skil1={item.skill1} skill2={item.skill2} />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
