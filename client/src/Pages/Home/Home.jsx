@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Home.css'
 import hero from '../../Assests/me.jpg'
 import ServiceCard from '../../Components/Cards/ServiceCard'
 import WebIcon from '@mui/icons-material/Web';
 import WebhookOutlinedIcon from '@mui/icons-material/WebhookOutlined';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
+import Progressbar from '../../Components/Progressbar/Progressbar'
+import {Typewriter } from "react-simple-typewriter"
 function Home() {
     const data = [
         {
@@ -26,6 +28,37 @@ function Home() {
             icon: <PhoneAndroidOutlinedIcon fontSize="inherit" />,
         }
     ];
+    const skill = [
+        {
+            name: "HTML",
+            percentage: 90,
+        },
+        {
+            name: "CSS",
+            percentage: 70,
+        },
+        {
+            name: "Javascript",
+            percentage: 75,
+        },
+        {
+            name: "ReactJS",
+            percentage: 86,
+        },
+        {
+            name: "NodeJS",
+            percentage: 76,
+        },
+        {
+            name: "ExpressJS",
+            percentage: 82,
+        },
+        {
+            name: "PHP",
+            percentage: 62,
+        }
+    ]
+    
     return (
         <>
             <div className="home-section">
@@ -40,7 +73,7 @@ function Home() {
                 {/* Hero section */}
                 <div className="hero-container">
                     <div className="hero-left">
-                        <h1>Hi, I am <span>Rafiul Faisal</span>,<br />Fullstack Developer</h1>
+                        <h1>Hi, I am <span>Rafiul Faisal</span>,<br /><span>{<Typewriter words={['Fullstack Developer', 'Backend Developer', 'React JS Developer']} loop={100}  />}</span></h1>
                         <p>A fullstack developer, who turning ideas into real life product.<br />Looking for fulltime opportunity.</p>
                         <button>Download Resume</button>
                     </div>
@@ -60,11 +93,24 @@ function Home() {
                             {
                                 data.map((item, index) => {
                                     return (
-                                        <ServiceCard key={index}  icon={item.icon} title={item.title} skil1={item.skill1} skill2={item.skill2} />
+                                        <ServiceCard key={index} icon={item.icon} title={item.title} skil1={item.skill1} skill2={item.skill2} />
                                     )
                                 })
                             }
                         </div>
+                    </div>
+                </div>
+                {/* Skill Section */}
+                <div className="skills-container">
+                    <h1>My Skills</h1>
+                    <div className="skills">
+                        {
+                            skill.map((item, index) => {
+                                return (
+                                    <Progressbar key={index} skill={item.name} percentage={item.percentage} />
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

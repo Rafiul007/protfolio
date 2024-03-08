@@ -2,17 +2,17 @@ import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import ServiceCard from "./Components/Cards/ServiceCard";
-import WebIcon from '@mui/icons-material/Web';
+import WebIcon from "@mui/icons-material/Web";
+import Progressbar from "./Components/Progressbar/Progressbar";
 function App() {
   return (
     <div>
       {/* react navigation */}
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
       </BrowserRouter>
-
     </div>
   );
 }

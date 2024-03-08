@@ -7,7 +7,6 @@
   outline: none;
 }
 .card-container:hover {
-  border: 1px solid #ff6464;
   box-shadow: 0 0 10px #ff6464;
   cursor: pointer;
 }

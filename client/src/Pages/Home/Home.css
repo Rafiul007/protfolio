@@ -1,5 +1,4 @@
 .home-section {
-  
 }
 .navbar-container {
   padding: 20px 0px;
@@ -17,7 +16,7 @@
   line-height: normal;
   padding: 0px 60px;
 }
-.navbar-container ul li{
+.navbar-container ul li {
   color: #313131;
   cursor: pointer;
 }
@@ -42,12 +41,17 @@
   font-weight: 700;
   line-height: 60px;
 }
-.hero-left h1 span{
+.hero-left h1 span {
   font-size: 44px;
   background: #ff6464;
   color: #fff;
   padding: 0px 5px;
   border-radius: 3px;
+}
+.hero-left span:nth-child(2) {
+  border-right: 1px solid black;
+  transition: opacity 0.5s ease-in-out;
+  animation: blink-caret 0.75s step-end infinite;
 }
 .hero-left p {
   color: #21243d;
@@ -70,12 +74,12 @@
   outline: none;
   border-radius: 3px;
   cursor: pointer;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
   border: 2px solid #ff6464;
 }
-.hero-left button:hover{
-background: #fff;
-color: #ff6464;
+.hero-left button:hover {
+  background: #fff;
+  color: #ff6464;
 }
 .hero-right {
 }
@@ -90,28 +94,48 @@ color: #ff6464;
   box-shadow: -7px 40px 12px -17px #edf7fa;
 }
 
-.services-container{
-  background: #EDF7FA;
+.services-container {
+  background: #edf7fa;
   padding: 20px 0px;
 }
-.services-sub-container{
+.services-sub-container {
   width: 70vw;
   margin: 120px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.services-sub-container h1{
+.services-sub-container h1 {
   color: #21243d;
   font-size: 44px;
   font-style: normal;
   font-weight: 700;
   line-height: 60px;
 }
-.service-cards{
+.service-cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
   margin-top: 30px;
+}
+
+/* Skill section css */
+.skills-container {
+  max-width: 85%;
+  margin: 140px auto;
+  padding: 20px;
+  text-align: center;
+}
+.skills-container h1 {
+  color: #21243d;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+.skills {
+  padding: 20px 25px;
+  width: 65%;
+  margin: auto;
 }
