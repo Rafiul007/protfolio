@@ -9,6 +9,7 @@ import Progressbar from '../../Components/Progressbar/Progressbar'
 import { Typewriter } from "react-simple-typewriter"
 import Aos from 'aos'
 import ResumePDF from '../../Assests/Rafiul Faisal.pdf';
+import Footer from '../../Components/Footers/Footer';
 function Home() {
     useEffect(() => {
         Aos.init({ duration: 2000 })
@@ -127,6 +128,7 @@ function Home() {
                         }
                     </div>
                 </div>
+                <Footer />
             </div>
         </>
     )

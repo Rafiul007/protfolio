@@ -3,6 +3,15 @@
 .navbar-container {
   padding: 20px 0px;
 }
+.navbar-container ul li {
+  color: #313131;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.navbar-container ul li:hover {
+  color: #2E77AE; /* Change color on hover */
+}
 .navbar-container ul {
   display: flex;
   flex-direction: row;
@@ -43,7 +52,7 @@
 }
 .hero-left h1 span {
   font-size: 44px;
-  background: #ff6464;
+  background: #2E77AE;
   color: #fff;
   padding: 0px 5px;
   border-radius: 3px;
@@ -63,7 +72,7 @@
 .hero-left button {
   width: 208px;
   height: 47px;
-  background: #ff6464;
+  background: #2E77AE;
   padding: 10px 20px;
   color: #fff;
   font-size: 18px;
@@ -75,11 +84,11 @@
   border-radius: 3px;
   cursor: pointer;
   transition: 0.4s ease-in-out;
-  border: 2px solid #ff6464;
+  border: 2px solid #2E77AE;
 }
 .hero-left button:hover {
   background: #fff;
-  color: #ff6464;
+  color: #2E77AE;
 }
 .hero-right {
 }
@@ -91,11 +100,11 @@
   border-radius: 243px;
   object-fit: cover;
   /* background: #edf7fa; */
-  box-shadow: -7px 40px 12px -17px #edf7fa;
+  box-shadow: -7px 40px 12px -17px #e9f4ff;
 }
 
 .services-container {
-  background: #edf7fa;
+  background: #e9f4ff;
   padding: 20px 0px;
 }
 .services-sub-container {
